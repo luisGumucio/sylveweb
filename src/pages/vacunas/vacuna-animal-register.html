@@ -1,0 +1,33 @@
+<ion-header>
+    <ion-navbar color="gras">
+        <ion-title>Registro Vacuna</ion-title>
+    </ion-navbar>
+</ion-header>
+<ion-content scroll="false">
+
+    <form [formGroup]="formVacuna" (ngSubmit)="createVacuna(formVacuna)" novalidate>
+        <ion-item>
+            <ion-label>Codigo Animal</ion-label>
+            <ion-input type="text" formControlName="codigoAnimal" name="codigo" aria-placeholder="codigo"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label>Codigo vacuna</ion-label>
+            <ion-input type="text" formControlName="codigoVacuna" name="codigo" aria-placeholder="codigo"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label>cantidad</ion-label>
+            <ion-input type="text" formControlName="cantidad" name="codigo"></ion-input>
+        </ion-item>
+        <ion-item>
+                <ion-label>Via</ion-label>
+                <ion-input type="text" formControlName="via" name="codigo"></ion-input>
+            </ion-item>
+        <ion-item>
+            <ion-label>Observaciones</ion-label>
+            <ion-input type="text" formControlName="observaciones" name="codigo"></ion-input>
+        </ion-item>
+
+        <button ion-button block [disabled]="!formVacuna.valid">
+        Registrar Vacuna</button>
+    </form>
+</ion-content>

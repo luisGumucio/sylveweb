@@ -1,0 +1,54 @@
+<ion-header>
+    <ion-navbar color="gras">
+        <ion-title>Crear Animal</ion-title>
+    </ion-navbar>
+</ion-header>
+
+
+<ion-content scroll="false" style="text-align: center;">
+    <form [formGroup]="formAnimal" (ngSubmit)="createAnimal(formAnimal)" novalidate>
+        <ion-item>
+            <ion-label color="primary">Codigo</ion-label>
+            <ion-input type="text" formControlName="codigo" name="codigo"></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-label color="primary">Nombre</ion-label>
+            <ion-input type="text" formControlName="nombre" name="codigo"></ion-input>
+        </ion-item>
+        <div style="width:100%; text-align: left; background-color: #519548; font-size: 1.7rem; font-weight: 600; padding-left: 4%;">
+            <label>Origen</label>
+        </div>
+        <ion-item>
+            <ion-label color="primary">Nacimiento</ion-label>
+            <ion-datetime displayFormat="MM/DD/YYYY" formControlName="nacimiento"></ion-datetime>
+        </ion-item>
+        <ion-item>
+            <ion-label color="primary">Peso</ion-label>
+            <ion-input type="number" formControlName="peso" name="23"></ion-input>
+        </ion-item>
+        <div style="width:100%; text-align: left; background-color: #519548; font-size: 1.7rem; font-weight: 600; padding-left: 4%;">
+            <label>Genero</label>
+        </div>
+        <ion-item>
+            <ion-label color="primary">Genero</ion-label>
+            <ion-select formControlName="genero">
+                <ion-option value="Macho">Macho</ion-option>
+                <ion-option value="Hembra">Hembra</ion-option>
+            </ion-select>
+        </ion-item>
+        <ion-item>
+            <ion-label color="primary">Raza</ion-label>
+            <ion-select formControlName="raza">
+                <ion-option value="brangus">brangus</ion-option>
+                <ion-option value="holstein">holstein</ion-option>
+            </ion-select>
+        </ion-item>
+        <ion-item>
+            <ion-label color="primary">Description</ion-label>
+            <ion-textarea formControlName="description" name="description"></ion-textarea>
+        </ion-item>
+        <button ion-button color="gras" block [disabled]="!formAnimal.valid">
+            crear</button>
+    </form>
+</ion-content>

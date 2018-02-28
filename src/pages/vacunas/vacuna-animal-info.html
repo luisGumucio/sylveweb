@@ -1,0 +1,35 @@
+<ion-header>
+    <ion-navbar color="gras">
+        <ion-title>Informacion Vacuna</ion-title>
+    </ion-navbar>
+</ion-header>
+<ion-content scroll="false">
+    <ion-row>
+        <ion-col style="background: blue; color: white">
+            <strong>Codigo</strong>
+        </ion-col>
+        <ion-col style="background: blue; color: white">
+            <strong>alimentacion</strong>
+        </ion-col>
+        <ion-col style="background: blue; color: white">
+            <strong>Dosis</strong>
+        </ion-col>
+    </ion-row>
+    <ion-row *ngFor="let vacunas of animalVacunas">
+        <ion-col>
+            <strong>{{vacunas.codigo}}</strong>
+        </ion-col>
+        <ion-col>
+            <strong>{{vacunas.nombre}}</strong>
+        </ion-col>
+        <ion-col>
+            <strong>{{vacunas.dosis}}</strong>
+        </ion-col>
+    </ion-row>
+
+    <ion-fab right bottom>
+        <button ion-fab color="reds" (click)="goToRegisterAnimal()">
+            <ion-icon name="md-add-circle"></ion-icon>
+        </button>
+    </ion-fab>
+</ion-content>

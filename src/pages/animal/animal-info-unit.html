@@ -1,0 +1,55 @@
+<ion-header>
+    <ion-navbar color="gras">
+        <ion-title>Informacion Animal</ion-title>
+    </ion-navbar>
+</ion-header>
+<ion-content>
+    <ion-item>
+        <p style="float:left; font-weight: bold">Codigo</p>
+        <p style="float:right">{{animal.codigo}}</p>
+    </ion-item>
+    <ion-item>
+        <p style="float:left; font-weight: bold">Nombre</p>
+        <p style="float:right">{{animal.nombre}}</p>
+    </ion-item>
+    <ion-item>
+        <p style="float:left; font-weight: bold">Edad</p>
+        <p style="float:right">{{animal.edad}}</p>
+    </ion-item>
+    <ion-item>
+        <p style="float:left; font-weight: bold">Raza</p>
+        <p style="float:right">{{animal.raza}}</p>
+    </ion-item>
+    <ion-item>
+        <p style="float:left; font-weight: bold">Peso</p>
+        <p style="float:right">{{animal.peso}}</p>
+    </ion-item>
+    <ion-item>
+        <p style="float:left; font-weight: bold">Nacimiento</p>
+        <p style="float:right">{{animal.nacimiento}}</p>
+    </ion-item>
+    <ion-item>
+        <p style="float:left; font-weight: bold">Genero</p>
+        <p style="float:right">{{animal.genero}}</p>
+    </ion-item>
+    <ion-fab right bottom #fab>
+        <button ion-fab (click)="openFabButton()">
+                    Historial
+             </button>
+        <ion-fab-list side="top">
+            <button ion-fab  (click)="share('vacuna', fab)">
+                  <img src="assets/alimentacion.png"> 
+              </button>
+              <ion-label class="las1">Vacuna</ion-label>
+            <button ion-fab color="secondary"  (click)="share('alimentacion', fab)">
+                    <ion-icon name="md-finger-print"></ion-icon>
+                    
+                  </button>
+                  <ion-label class="las2">Alimentacion</ion-label>
+            <button ion-fab color="secondary" (click)="share('tratamiento', fab)">
+                    <ion-icon name="md-finger-print"></ion-icon>
+                  </button>
+                  <ion-label class="las">Tratamiento</ion-label>
+        </ion-fab-list>
+    </ion-fab>
+</ion-content>
